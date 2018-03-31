@@ -1,6 +1,6 @@
 var dbhost = 'localhost';
 var dbuser = 'root';
-var dbpassword = 'mimacuowu';
+var dbpassword = '123456';
 var database = 'checkin';
 var dbport = '3306'
 module.exports = {
