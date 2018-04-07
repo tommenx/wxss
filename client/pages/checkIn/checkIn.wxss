@@ -1,0 +1,43 @@
+.page_check_hd {
+    padding: 20rpx;
+}
+.page_check_title{
+    font-size: 20px;
+    text-align: center;
+    height: 400;
+}
+
+.check_image_bd {
+    width: 100%;
+    align-content: center;
+}
+.check_image {
+    width: 600rpx;
+    height: 400rpx;
+    padding-left:75rpx; 
+}
+.button-sp-area{
+    margin: 0 auto;
+    padding-top: 15px;
+    width: 60%;
+}
+.check_group{
+    margin: 0 auto;
+    padding-top: 30px;
+    width: 70%;
+}
+.mini-btn{
+    margin-right: 5px;
+}
+.text_item {
+    float: right;
+    display: block;
+    font-size: 15px;
+    margin-top: 2rpx;
+}
+.btn_footer {
+    margin-bottom: 50px;
+}
+.group_item {
+    margin-top: 20px;
+}

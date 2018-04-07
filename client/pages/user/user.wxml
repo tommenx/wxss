@@ -1,0 +1,16 @@
+<view class='container'>
+  <image src='{{avator_path}}' class='avator' mode='aspectFill'></image>
+</view>
+<view class='user-info'>
+  <view class='item'>
+    <text>姓名：</text>
+    <text>{{ userInfo.nickName }}</text>
+  </view>
+  <view class='item'>
+    <text>城市：</text>
+    <text>{{ userInfo.city }}</text>
+  </view>
+</view>
+<view class='update-info'>
+  <button class="weui-btn" type="primary" bindtap='changeAvator'>更改信息</button>
+</view>

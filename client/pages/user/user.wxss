@@ -1,0 +1,21 @@
+
+.container {
+  height: 100%;
+}
+.avator {
+  margin-top: 100rpx;
+}
+.user-info{
+  padding-top: 50rpx;
+  margin-left: 250rpx;
+}
+.user-info .item {
+  padding-bottom: 20rpx;
+}
+.item text {
+  padding-left: 5rpx;
+}
+.update-info {
+  margin: 0 auto;
+  width: 60%;
+}

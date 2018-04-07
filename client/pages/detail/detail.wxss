@@ -1,0 +1,56 @@
+.page_detail_hd {
+    padding: 20rpx;
+}
+.page_detail_title{
+    font-size: 20px;
+    text-align: center;
+    height: 400;
+}
+.cell_image {
+    width: 16px;
+    height: 16px;
+}
+.cell_image_sm{
+    width: 14px;
+    height: 14px;
+}
+.label_head {
+    display: inline
+}
+
+.label_name {
+    margin-left:50rpx;
+}
+.check_image{
+    padding-left:50rpx;
+}
+
+.desc_content {
+    width: 90%;
+    float: right;
+}
+.check_content_date {
+    width: 90%;
+    float: right;
+}
+.check_content_detail {
+    width: 80%;
+    float: right;
+}
+.check_image {
+    padding: 0;
+    margin: 0;
+    width: 240px;
+    height: 180px;
+    display: block
+}
+.button-sp-area{
+    margin: 0 auto;
+    padding-top: 15px;
+    width: 80%;
+}
+.check_item {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}

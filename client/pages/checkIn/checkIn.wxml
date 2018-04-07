@@ -1,0 +1,26 @@
+<view class="page">
+    <view class="page_check_hd">
+        <view class="page_check_title">{{activity_title}}</view>
+    </view>
+    <view class='check_image_bd'>
+        <image class='check_image' src='{{photo}}'></image>
+    </view>
+    <view class="button-sp-area">
+        <button class="weui-btn" type="primary" plain="true" bindtap='photoCheck'>上传打卡照片</button>
+    </view>
+    <view class='check_group'>
+        <view class='group_item'>
+            <button class="weui-btn mini-btn" disabled='{{location_disabled}}' type="primary" size="mini" bindtap='locationCheck'>地点验证</button>
+            <view class='text_item'>{{location_res}}</view>
+        </view>
+        <view class='group_item'>
+            <button class="weui-btn mini-btn" type="primary" size="mini" bindtap='faceCheck' disabled='{{face_disabled}}'>人脸验证</button>
+            <view class='text_item'>{{face_res}}</view>
+        </view>
+    </view>
+    <view class="page__bd page__bd_spacing">
+        <view class='btn_footer'></view>
+        <button class="weui-btn" type="primary" bindtap='submitCheck'>完成</button>
+    </view>
+    
+</view>

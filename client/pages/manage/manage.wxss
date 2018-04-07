@@ -1,0 +1,11 @@
+page,
+.page,
+.page__bd{
+    height: 100%;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+.weui-media-box__desc {
+  padding-bottom: 8rpx;
+}

@@ -1,0 +1,46 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                    <view class="weui-panel weui-panel_access">
+                        <view class="weui-panel__bd">
+                            <block wx:for="{{processing}}">
+                                <navigator url='../detail/detail?activity_id={{item.F_ID}}' open-type='navigate'>
+                                    <view class="weui-media-box weui-media-box_text">
+                                        <view class="weui-media-box__title weui-media-box__title_in-text">{{item.F_Caption}}</view>
+                                        <view class="weui-media-box__desc">{{item.F_StartDate}}——{{item.F_EndDate}}</view>
+                                        <view class="weui-media-box__desc">{{item.F_Location}}</view>
+                                        <view class="weui-media-box__desc">今日已打卡</view>
+                                    </view>
+                                </navigator>
+                            </block>
+                        </view>
+                    </view>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                    <view class="weui-panel weui-panel_access">
+                        <view class="weui-panel__bd">
+                            <block wx:for="{{completed}}">
+                                <view class="weui-media-box weui-media-box_text">
+                                    <view class="weui-media-box__title weui-media-box__title_in-text">{{item.F_Caption}}</view>
+                                    <view class="weui-media-box__desc">{{item.F_StartDate}}——{{item.F_EndDate}}</view>
+                                    <view class="weui-media-box__desc">{{item.F_Location}}</view>
+                                    <view class="weui-media-box__desc">打卡1次</view>
+                                </view>
+                            </block>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

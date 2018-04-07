@@ -1,0 +1,56 @@
+<view class="page">
+    <view class="page_detail_hd">
+        <view class="page_detail_title">{{activity_info.infos[0].F_Caption}}</view>
+    </view>
+    <view class="weui-cell" bindtap='getActivity_detail'>
+        <view class="weui-cell__hd">
+            <image class='cell_image' src='../../image/right.png'></image>
+            <view class="weui-label label_head">活动详情</view>
+        </view>
+    </view>
+    <view class="weui-cell desc_content" hidden='{{!detail_show}}'>
+        <view class="weui-cell__bd">
+            <view>发起人： {{activity_info.infos[0].F_CreaterName}}</view>
+            <view>活动开始时间： {{activity_info.infos[0].F_StartDate}}</view>
+            <view>活动结束时间： {{activity_info.infos[0].F_EndDate}}</view>
+            <view>活动地点： {{activity_info.infos[0].F_Location}}</view>
+            <view>简介： {{activity_info.infos[0].F_Desc}}</view>
+        </view>
+    </view>
+
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <image class='cell_image' src='../../image/right.png'></image>
+            <view class="weui-label label_head">已有{{activity_info.nums}}人报名</view>
+        </view>
+    </view>
+    <view class="weui-cell" bindtap='getCheckDate'>
+        <view class="weui-cell__hd">
+            <image class='cell_image' src='../../image/right.png'></image>
+            <view class="weui-label label_head">打卡记录</view>
+        </view>
+    </view>
+
+    <block wx:for='{{detail_info.dates}}'>
+        <view class="weui-cell" hidden='{{show_date}}'>
+            <view class="weui-cell__hd" bindtap='getDetailedCheck' data-date='{{item.F_CheckDate}}'>
+                <image class='cell_image' src='../../image/right.png'></image>
+                <view class="weui-label label_head">{{item.F_CheckDate}}</view>
+            </view>
+        </view>
+    </block>
+
+     <view hidden='{{date_info_hidden}}'>
+        <block wx:for='{{check_date_info}}'>
+            <view class="weui-cell__bd">
+                <view class='label_name'>
+                    {{item.F_UserName}}
+                </view>
+                <image class='check_image' src='{{item.F_CheckPhotoUrl}}'></image>
+            </view>
+        </block>
+    </view> 
+    <view class="button-sp-area">
+        <button class="weui-btn" type="primary" bindtap='submitCheck'>{{apply_msg}}</button>
+    </view>
+</view>
